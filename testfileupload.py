@@ -1,15 +1,15 @@
-from flask import Flask, request
+from flask import Flask, request, url_for
 app = Flask(__name__)
 
 @app.route("/display/")
 def display():
-	return '<img src="'+url_for('staticexample', filename='static/uploads/upload.png')+'"/>'
+	return '<img src="'+url_for('static', filename='uploads/upload.png')+'"/>'
 
 @app.route("/upload/", methods=['POST', 'GET'])
 def account():
 	if request.method == 'POST':
 		f = request.files['datafile']
-		f.save('staticexample/static/uploads/upload.png')
+		f.save('static/uploads/upload.png')
 		return "File Uploaded"
 	else:
 		page='''
