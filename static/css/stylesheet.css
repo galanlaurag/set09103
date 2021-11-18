@@ -24,6 +24,8 @@ li {
   width: min(50vw, 5em);
 }
 .navbar {
+    margin-bottom: 0.3em !important;
+    padding-top: 0.3em !important;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,7 +33,7 @@ li {
     padding-right: 6em;*/
 }
 .menu {
-  display: flex;
+  display: flex !important;
   gap: 3em;
   font-size: 1.5em;
 }
